@@ -1,0 +1,17 @@
+# graph TD
+    Hotspot((Mobile Hotspot)) --> Laptop[Arch Laptop - Gateway]
+    Laptop -- Ethernet --> Modem
+    Modem -- Ethernet --> ProDesk[HP ProDesk 600 - Proxmox]
+    ProDesk --> SnipeIT[LXC: Snipe-IT Asset Mgmt]
+    ProDesk --> HA[VM: ubuntu server ]
+
+
+## Enable IPv4 forwarding
+sudo sysctl -w net.ipv4.ip_forward=1
+
+### NAT configurationMASQUERADE traffic from Proxmox nodes to Wi-Fi
+sudo iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+
+Optional:
+Tailscale VPN for remote access
+tailscale up
