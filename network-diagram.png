@@ -4,3 +4,26 @@ Gateway: Arch Laptop Ethernet IP → 192.168.1.105
 Proxmox Node: 192.168.1.101
 Arch Laptop: 192.168.1.105
 Pi-hole DNS: 192.168.1.150 (primary), 1.1.1.1 (secondary – Cloudflare)
+
+
+# Home Lab Infrastructure
+
+## Devices
+- ARC-LAP-01: Arch Laptop (Gateway + Zabbix Server)
+- PRX-SRV-02: Proxmox Node 1 (VM host)
+- SW-MDM-03: Nokia Modem (Dumb Switch)
+
+## Network Layout
+- Subnet: 192.168.1.0/24
+- Gateway: 192.168.1.105
+- Pi-hole DNS: 192.168.1.150 / 1.1.1.1
+
+## Virtual Machines
+- Ubuntu VM: Zabbix Agent
+- Pi-hole VM: DNS filtering
+- LXC container: Snipe-IT (planned)
+
+## Key Configurations
+- IPv4 forwarding and NAT on Arch laptop
+- Tailscale VPN optional
+- Monitoring via Zabbix
