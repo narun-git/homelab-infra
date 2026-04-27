@@ -31,34 +31,32 @@ The lab is used to practice **Linux administration, networking, and infrastructu
                               
 ## Network Architecture
 
-![Network Diagram](network-diagram.png)
-
 [![Screenshot-2026-04-27-170457.jpg](https://i.postimg.cc/sxNwD1V7/Screenshot-2026-04-27-170457.jpg)](https://postimg.cc/H8bQ6Y8k)
+
 ## Network zones
+
 | Zone           | Subnet      | Purpose                        |
-|-----          -|--------     |---------                       |
 | Infrastructure | 192.168.x.x | Proxmox, VMs, LXC — static IPs |
 | Guest | 10.x.x.x | Client devices — isolated from infra       |
 
 **OPNsense** runs on the Arch laptop and enforces zone separation.  
 Proxmox nodes and VMs are unreachable from the guest network by firewall rule.
 
----
+
 
 ## Services
 
-| Service | Host | Purpose |
-|---------|------|---------|
-| OPNsense | Arch Linux (bare metal) | Firewall, NAT, dual-zone isolation |
-| Zabbix server | Arch Linux | Infrastructure monitoring |
-| Pi-hole | Arch Linux | DNS filtering · Cloudflare 1.1.1.1 upstream |
-| Proxmox VE | HP ProDesk | Hypervisor — VM and LXC management |
-| AlmaLinux VM | Proxmox | RHEL-compatible test environment |
-| Windows Server VM | Proxmox | Active Directory lab (in progress) |
-| Snipe-IT | Proxmox LXC | IT asset management |
-| Zabbix agent | Proxmox node | Sends metrics to Zabbix server on Arch |
+| Service       | Host                    | Purpose |
 
----
+| OPNsense      | Arch Linux (bare metal) | Firewall, NAT, dual-zone isolation |
+| Zabbix server | Arch Linux | Infrastructure monitoring |
+| Pi-hole       | Arch Linux | DNS filtering · Cloudflare 1.1.1.1 upstream |
+| Proxmox VE    | HP ProDesk | Hypervisor — VM and LXC management |
+| AlmaLinux VM  | Proxmox | RHEL-compatible test environment |
+| Windows Server VM | Proxmox | Active Directory lab (in progress) |
+| Snipe-IT      | Proxmox LXC | IT asset management |
+| Zabbix agent  | Proxmox node | Sends metrics to Zabbix server on Arch |
+
 
 ## Virtual Machines & Containers
 
@@ -73,8 +71,6 @@ Static IP: `192.168.1.101` · Headless · managed via SSH from Arch Konsole
 
 LXC containers are created and destroyed as needed — ephemeral 
 workloads for testing services without committing VM resources.
-
----
 
 ## Monitoring
 
