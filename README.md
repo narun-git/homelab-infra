@@ -1,3 +1,4 @@
+
 # homelab-infrastructure
 Personal infrastructure lab running production-grade services on consumer hardware. Built to practice IT/OT security, network 
 segmentation, system administration, and infrastructure monitoring
@@ -32,6 +33,7 @@ The lab is used to practice **Linux administration, networking, and infrastructu
 
 ![Network Diagram](network-diagram.png)
 
+[![Screenshot-2026-04-27-170457.jpg](https://i.postimg.cc/sxNwD1V7/Screenshot-2026-04-27-170457.jpg)](https://postimg.cc/H8bQ6Y8k)
 ## Network zones
 | Zone           | Subnet      | Purpose                        |
 |-----          -|--------     |---------                       |
