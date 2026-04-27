@@ -31,7 +31,8 @@ The lab is used to practice **Linux administration, networking, and infrastructu
                               
 ## Network Architecture
 
-[![Screenshot-2026-04-27-170457.jpg](https://i.postimg.cc/sxNwD1V7/Screenshot-2026-04-27-170457.jpg)](https://postimg.cc/H8bQ6Y8k)
+[![Screenshot-2026-04-27-170457.jpg](https://i.postimg.cc/W4zdwGxq/Screenshot-2026-04-27-170457.jpg)](https://postimg.cc/HJGWpyYT)
+
 
 ## Network zones
 
